@@ -32,7 +32,9 @@ const allowedOrigins = new Set([
   "http://localhost:5173/",
   "http://localhost:5173",
   "https://supern-admin.vercel.app/",
-  "https://supern-admin.vercel.app"
+  "https://supern-admin.vercel.app",
+  "https://admin.supernpro.com/",
+  "https://admin.supernpro.com"
 ]);
 
 // CORS middleware setup
