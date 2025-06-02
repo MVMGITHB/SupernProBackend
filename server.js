@@ -30,7 +30,9 @@ const allowedOrigins = new Set([
   "https://jobkityaari.com/",
   "https://jobkityaari.com",
   "http://localhost:5173/",
-  "http://localhost:5173"
+  "http://localhost:5173",
+  "https://supern-admin.vercel.app/",
+  "https://supern-admin.vercel.app"
 ]);
 
 // CORS middleware setup
