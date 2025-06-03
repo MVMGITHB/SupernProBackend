@@ -50,6 +50,44 @@ export const getBlogsByCategorySlug = async (req, res) => {
 
 
 
+export const searchBlogs = async (req, res) => {
+  const { query } = req.query;
+
+  if (!query) {
+    return res.status(400).json({ message: 'Search query is required' });
+  }
+
+  const regex = new RegExp(query, 'i'); // case-insensitive partial match
+
+  try {
+    const blogs = await Blog.find({
+      $or: [
+        { title: regex },
+        { slug: regex },
+        { mtitle: regex },
+        { mdesc: regex },
+        { content: regex },
+        { conclusion: regex },
+        { alt: regex },
+        { 'faqs.ques': regex },
+        { 'faqs.ans': regex }
+      ],
+      status: 'Active',
+    })
+    .populate('category', 'name')
+    .populate('tag', 'name')
+    .populate('author', 'name email');
+
+    res.json(blogs);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error', error });
+  }
+};
+
+
+
+
 
 // Get Single Blog
 export const getBlogById = async (req, res) => {
