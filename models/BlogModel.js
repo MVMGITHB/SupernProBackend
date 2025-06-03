@@ -27,8 +27,6 @@ const BlogSchema = new mongoose.Schema(
           default: null,
         },
 
-       
-
           image:{
             type:String,
             default:"https://tse3.mm.bing.net/th?id=OIP.jeIZbiXiDT0YeHnsFCDUEgHaDl&pid=Api&P=0&h=180"
@@ -78,9 +76,6 @@ const BlogSchema = new mongoose.Schema(
             type:String,
             default:"Inactive"
           },
-
-         
-
 
   },
   { timestamps: true }

@@ -34,7 +34,9 @@ const allowedOrigins = new Set([
   "https://supern-admin.vercel.app/",
   "https://supern-admin.vercel.app",
   "https://admin.supernpro.com/",
-  "https://admin.supernpro.com"
+  "https://admin.supernpro.com",
+  "http://82.25.109.68:3004/",
+  "http://82.25.109.68:3004"
 ]);
 
 // CORS middleware setup
