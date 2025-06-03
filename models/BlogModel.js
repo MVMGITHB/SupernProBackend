@@ -59,11 +59,11 @@ const BlogSchema = new mongoose.Schema(
             {
               ques: {
                 type: String,
-                required: true
+                // required: true
               },
               ans: {
                 type: String,
-                required: true
+                // required: true
               }
             }
           ],
