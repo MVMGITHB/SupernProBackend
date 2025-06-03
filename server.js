@@ -36,7 +36,9 @@ const allowedOrigins = new Set([
   "https://admin.supernpro.com/",
   "https://admin.supernpro.com",
   "http://82.25.109.68:3004/",
-  "http://82.25.109.68:3004"
+  "http://82.25.109.68:3004",
+  "https://supernpro.com/",
+  "https://supernpro.com"
 ]);
 
 // CORS middleware setup
