@@ -74,8 +74,8 @@ export const searchBlogs = async (req, res) => {
       ],
       status: 'Active',
     })
-    .populate('category', 'name')
-    .populate('tag', 'name')
+    .populate('category')
+    .populate('tag')
     .populate('author', 'name email');
 
     res.json(blogs);
