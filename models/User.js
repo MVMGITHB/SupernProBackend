@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema(
     dateOfBirth: { type: String },
    
     image:{
-   type:String,
+     type:String,
     },
 
     
